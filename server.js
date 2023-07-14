@@ -10,6 +10,7 @@ import {
 } from "./middleware/errorHandler.js";
 import QuestionRoute from "./Routes/questionRoute.js";
 import testCaseRoute from "./Routes/testCaseRoute.js";
+import SphereEngineRoute from "./Routes/sphereEngineRoute.js";
 // config .env
 dotenv.config();
 
@@ -33,6 +34,7 @@ app.get("/", (req, res) => {
 app.use("/api/users", userRote);
 app.use("/api/question", QuestionRoute);
 app.use("/api/testCase", testCaseRoute);
+app.use("/api/sphereEngine", SphereEngineRoute);
 
 // error handling
 app.use(invalidPathHandler);
